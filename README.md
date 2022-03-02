@@ -1,3 +1,4 @@
-## Sta 323 - git demo repository
+## CS 216 - git repository
 
-Generally the README will contain instructions for your assignment, you should always read it first.
+README TEXT
+
