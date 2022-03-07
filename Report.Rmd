@@ -1,0 +1,59 @@
+---
+title: "CS 216 Final Project"
+author: '*Yujia Shen, Jack Xu, Drew Peterson, Justin Lim, Sara Shao*'
+date: "`r Sys.Date()`"
+output: 
+  pdf_document:
+    number_sections: true
+editor_options: 
+  markdown: 
+    wrap: 72
+fontsize: 10pt #10, 11, 12pt
+link-citations: true
+bibliography: references.bib
+---
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE, 
+                      warning = FALSE, 
+                      message = FALSE,
+                      fig.width = 6, #width of figure
+                      fig.asp = .618, #set figure height based on aspect ratio
+                      out.width = "75%", #width relative to text
+                      fig.align = "center" #alignment
+)
+```
+
+```{r load-packages, echo = FALSE}
+library(tidyverse)
+library(knitr)
+```
+
+# Introduction
+
+
+## Research Motivation:
+
+  The COVID-19 pandemic’s impact on the global stock market has been drastic and ongoing. @BISreport With this project, we hope to analyze if certain pandemic metrics can directly predict reactions from the stock market, represented by key stocks and indices from the worldwide market. We intend to make some conclusions on the stocks and indices most strongly affected by the pandemic, as well as make predictions in the event of a future pandemic.
+
+## Research questions
+
+1. How has the COVID-19 pandemic impacted the stock market (i.e. what is the correlation), on regional and global levels?
+2. How can we use the impacts from these outbreaks to predict the impact of pandemics in the event of a future outbreak?
+
+  For these research questions, we plan to analyze the trends in the progression of the outbreaks against the timelines of stock market trends using the key indices we mention below. Since these outbreaks impacted different areas at varying times and severity, looking at different regional markets will be useful. We believe this is feasible as we have chosen a specific research question from obtainable data which we can analyze several different aspects of, using different methods of analysis such as exploratory data analysis, multiple regression, etc. These research questions are important as the volatility of pandemics has made severe and widespread impacts on the global market. Being able to better predict and react accordingly will be essential in minimizing these impacts.
+
+## Data description:
+
+  First, we have a dataset from kaggle, containing data from the Covid 19 pandemic. Our intention is to use this data, which tracks the progression of the pandemic (new cases, deaths, recoveries, etc.), to make predictions on the performance of the stock market. @Covid19data
+
+  Next, we intend to obtain historical returns data using the Bloomberg terminals available in the Perkins Library. Some key indices we have identified that we intend to explore are: 
+VIX (volatility index)
+S&P
+Nikkei (Japan)
+SSE 50 (Shanghai)
+KOSPI (Korea)
+STOXX50E (Eurozone)
+
+  As these datasets are readily available either online or using resources available at Duke, we believe that our data collection plan and research questions are feasible. 
+
+# References
