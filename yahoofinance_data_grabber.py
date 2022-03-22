@@ -1,5 +1,7 @@
+# NOTE: you may have to use the 'pip install' command for the yahoofinancials package
 import pandas as pd
 from yahoofinancials import YahooFinancials
+
 
 def grab_index_data(index_list):
     data_list = []
@@ -13,11 +15,15 @@ def grab_index_data(index_list):
         data_list.append(df)
     return data_list
 
+
 def main():
+    # Indices: S&P 500 (^GSPC), Volatility Index (^VIX), Japanese Nikkei (^N225),
+    # Shanghai SSE (000001.SS), Korean KOSPI (^KS11), Eurozone STOXX50E (^STOXX50E)
     index_list = ['^GSPC', '^VIX', '^N225', '000001.SS', '^KS11', '^STOXX50E']
     data_list = grab_index_data(index_list)
     for data in data_list:
         print(data.head())
+
 
 if __name__ == "__main__":
     main()
