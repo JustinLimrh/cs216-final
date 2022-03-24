@@ -21,9 +21,9 @@ def main():
     # Shanghai SSE (000001.SS), Korean KOSPI (^KS11), Eurozone STOXX50E (^STOXX50E)
     index_list = ['^GSPC', '^VIX', '^N225', '000001.SS', '^KS11', '^STOXX50E']
     data_list = grab_index_data(index_list)
-    for data in data_list:
-        print(data.head())
-
+#   for data in data_list:
+#      print(data.head())
+    print(data_list)
 
 if __name__ == "__main__":
     main()
